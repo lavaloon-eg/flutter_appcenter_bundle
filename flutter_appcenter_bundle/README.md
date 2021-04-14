@@ -23,9 +23,6 @@ await AppCenter.startAsync(
     appSecretIOS: '******',
     enableAnalytics: true, // Defaults to true
     enableCrashes: true, // Defaults to true
-    enableDistribute: true, // Defaults to false
-    usePrivateDistributeTrack: false, // Defaults to false
-    disableAutomaticCheckForUpdate: false, // Defaults to false
   );
   
 AppCenter.trackEventAsync('my event', <String, String> {
@@ -40,10 +37,4 @@ AppCenter.trackEventAsync('my event', <String, String> {
 await AppCenter.configureAnalyticsAsync(enabled: true);
 
 await AppCenter.configureCrashesAsync(enabled: true);
-
-await AppCenter.configureDistributeAsync(enabled: true);
-
-await AppCenter.configureDistributeDebugAsync(enabled: true); // Android Only
-
-await AppCenter.checkForUpdateAsync(); // Manually check for update
 ```
